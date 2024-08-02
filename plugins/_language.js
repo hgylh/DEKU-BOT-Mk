@@ -45,8 +45,8 @@ const handler = async (m, { args, usedPrefix, command, isAdmin }) => {
                 m.reply(`*[ ✅ ] The Mystic - Bot*\n\n*—◉* *_Langue définie en Français 🇫🇷_*`)
 
             }else if (sigla === 'ar') {
-                global.db.data.users[m.sender].language = 'ar'
-                m.reply("[ ✅ ] ذا ميستيك - بوت\n\n*—◉* اللغة مضبوطة على العربية 🇸🇦")
+                global.db.data.users[m.sender].language = 'عربي'
+                m.reply("[ ✅ ] 𝐆𝐎𝐉𝐎⚡𝐁𝐎𝐓\n\n*—◉* اللغة مضبوطة على العربية 🇸🇦")
 
             }else {
 
@@ -98,13 +98,13 @@ ${tradutor.texto1[1]}
 
                 m.reply(`*[ ✅ ] Configuration du groupe*\n\n*—◉* *_Langue définie en Français 🇫🇷_*`)
             } else if (sigla === 'ar') {
-                global.db.data.chats[m.chat].language = 'ar';
+                global.db.data.chats[m.chat].language = 'عربي';
 
                 m.reply("[ ✅ ] تكوين المجموعة\n\n*—◉* اللغة مضبوطة على العربية 🇸🇦")
             } else  {
                 m.reply(`
 ${tradutor.texto2[0]}
-*${usedPrefix}langgroup* es
+*${usedPrefix}langgroup* ar
 
 ${tradutor.texto2[1]}
 
@@ -114,8 +114,8 @@ ${tradutor.texto2[1]}
         }
         // Fim 
     } catch (error) {
-        global.db.data.users[m.sender].language = 'es'
-        global.db.data.chats[m.chat].language = 'es'
+        global.db.data.users[m.sender].language = 'ar'
+        global.db.data.chats[m.chat].language = 'ar'
         m.reply(`*[ERROR]* -  _Por defecto el idioma estaba configurado en español._
                 \`\`\`contacta a los creadores del bot\`\`\` `)
     }
@@ -125,6 +125,6 @@ ${tradutor.texto2[1]}
 
 
 
-handler.command = /^(lang||langgroup)$/i;
+handler.command = /^(لغه||langgroup)$/i;
 
 export default handler
